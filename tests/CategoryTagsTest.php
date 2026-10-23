@@ -2,15 +2,14 @@
 
 namespace Aammui\LaravelTaggable\Tests;
 
-use Illuminate\Database\Eloquent\Model;
-
-use Aammui\LaravelTaggable\Tests\TestCase;
 use Aammui\LaravelTaggable\Traits\HasCategory;
 use Aammui\LaravelTaggable\Traits\HasTag;
+use Illuminate\Database\Eloquent\Model;
+use PHPUnit\Framework\Attributes\Test;
 
 class CategoryTagsTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function string_category_can_add_to_models()
     {
         $post = Post::create(['name' => 'Post Name']);
@@ -18,7 +17,7 @@ class CategoryTagsTest extends TestCase
         $this->assertEquals(1, $post->category->count());
     }
 
-    /** @test */
+    #[Test]
     public function array_category_can_add_to_models()
     {
         $post = Post::create(['name' => 'Post Title']);
@@ -26,7 +25,7 @@ class CategoryTagsTest extends TestCase
         $this->assertEquals(2, $post->category->count());
     }
 
-    /** @test */
+    #[Test]
     public function string_tags_can_add_to_models()
     {
         $post = Post::create(['name' => 'Title']);
@@ -34,7 +33,7 @@ class CategoryTagsTest extends TestCase
         $this->assertEquals(1, $post->tag->count());
     }
 
-    /** @test */
+    #[Test]
     public function array_tags_can_add_to_models()
     {
         $post = Post::create(['name' => 'name']);
