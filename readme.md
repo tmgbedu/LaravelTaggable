@@ -12,6 +12,9 @@ Category and Tags are often useful while working working with Laravel Model. Thi
 composer require aammui/laravel-taggable
 ```
 
+**Compatibility:** 3.1 supports Laravel 10, 11, 12 and 13 on PHP 8.1–8.5 (tested in CI).
+See the [CHANGELOG](CHANGELOG.md).
+
 ### Step2: Publish Migrations assets
 ```
 php artisan vendor:publish --provider="Aammui\LaravelTaggable\LaravelTaggableServiceProvider"
